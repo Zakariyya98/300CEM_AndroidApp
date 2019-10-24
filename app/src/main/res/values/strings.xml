@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">300CEM Assignment</string>
     <string name="action_settings">Settings</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="please_login_to_continue">Please Login to Continue</string>
+    <string name="password">Password:</string>
+    <string name="username">Username:</string>
 </resources>
