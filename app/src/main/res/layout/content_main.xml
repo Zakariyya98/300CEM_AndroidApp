@@ -34,13 +34,14 @@
         android:id="@+id/usernameEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="74dp"
         android:layout_marginEnd="67dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:background="@drawable/roundedfield"/>
 
     <EditText
         android:id="@+id/passwordEnter"
@@ -51,7 +52,9 @@
         android:layout_marginTop="140dp"
         android:layout_marginEnd="67dp"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:background="@drawable/roundedfield"/>
 
     <TextView
         android:id="@+id/userName"
@@ -82,6 +85,17 @@
         android:layout_marginStart="117dp"
         android:layout_marginBottom="12dp"
         android:text="@string/register" />
+
+    <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="239dp"
+        android:layout_marginBottom="190dp"
+        android:text="@string/take_a_picture"
+        android:onClick="onButtonClick" />
 
 
 </RelativeLayout>
