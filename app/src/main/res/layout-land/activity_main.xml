@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="25dp"
         android:text="@string/please_login_to_continue"
         android:textSize="24sp" />
 
@@ -35,9 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="700dp"
         android:background="@drawable/roundedfield"
         android:ems="10"
         android:inputType="textPersonName"
@@ -45,27 +44,18 @@
 
     <EditText
         android:id="@+id/passwordEnter"
-        android:layout_width="wrap_content"
+        android:layout_width="211dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="148dp"
-        android:layout_marginEnd="94dp"
+        android:layout_marginStart="366dp"
+        android:layout_marginTop="155dp"
+        android:layout_marginEnd="703dp"
         android:background="@drawable/roundedfield"
         android:ems="10"
         android:inputType="textPassword"
         android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="90dp"
-        android:text="@string/username" />
 
     <TextView
         android:id="@+id/passWord"
@@ -73,9 +63,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="153dp"
+        android:layout_marginStart="281dp"
+        android:layout_marginTop="157dp"
         android:text="@string/password" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="281dp"
+        android:layout_marginTop="94dp"
+        android:text="@string/username" />
 
     <Button
         android:id="@+id/registerButton"
@@ -93,8 +93,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="214dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginBottom="11dp"
         android:onClick="onButtonClick"
         android:text="@string/take_a_picture" />
 
