@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomePage();
+                openMainPage();
             }
         });
 
@@ -47,8 +47,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void openHomePage() {
-        Intent intent = new Intent(this, HomePage.class);
+    public void openMainPage() {
+        Intent intent = new Intent(this, MainPage.class);
         startActivity(intent);
     }
 }

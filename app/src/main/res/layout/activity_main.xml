@@ -95,8 +95,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="214dp"
         android:layout_marginBottom="12dp"
-        android:onClick="onButtonClick"
         android:text="@string/take_a_picture" />
-
+        //android:onClick="onButtonClick"
 
 </RelativeLayout>
