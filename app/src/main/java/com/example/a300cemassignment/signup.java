@@ -28,7 +28,7 @@ public class signup extends AppCompatActivity {
         passwordSignup = (EditText) findViewById(R.id.passwordSignup);
     }
 
-    public void save(View view){
+    public void save(View v){
         int anuserID = Integer.parseInt(userID.getText().toString());
         String aUsername = usernameSignup.getText().toString();
         String aPassword = passwordSignup.getText().toString();
