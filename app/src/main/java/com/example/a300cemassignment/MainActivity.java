@@ -13,21 +13,32 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
+    private Button buttonSignup;
+    private Button buttonHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        button = (Button) findViewById(R.id.registerButton);
-        button.setOnClickListener(new View.OnClickListener() {
+        //Button to open the Signup Page
+        buttonSignup = (Button) findViewById(R.id.registerButton);
+        buttonSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 opensignup();
             }
         });
+
+        //Button to open the homepage needs login verification first
+        buttonHome = (Button) findViewById(R.id.buttonLogin);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
+
 
     }
 
@@ -35,7 +46,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, signup.class);
         startActivity(intent);
     }
+
+    public void openHomePage() {
+        Intent intent = new Intent(this, HomePage.class);
+        startActivity(intent);
+    }
 }
+
+
+
 
 
 

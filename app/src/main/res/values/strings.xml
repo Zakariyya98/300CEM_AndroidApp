@@ -8,4 +8,34 @@
     <string name="username">Username:</string>
     <string name="take_a_picture">Take a picture</string>
     <string name="title_activity_signup">signup</string>
+
+
+<string-array name="UniBuildings">
+<item>Alan Berry</item>
+<item>Alma</item>
+<item>Bugatti</item>
+<item>Charles Ward</item>
+<item>Engineering and Computing Building</item>
+<item>Ellen Terry</item>
+<item>George Elliot</item>
+<item>Graham Sutherland</item>
+<item>Lanchester Library</item>
+<item>Jaguar</item>
+<item>The HUB</item>
+<item>Maurice Foss</item>
+<item>James Starley</item>
+<item>Mile Lane</item>
+<item>Multi Storey Car Park</item>
+<item>Priory Building</item>
+<item>Richard Crossman</item>
+<item>Alison Gingell Building</item>
+<item>John Laing</item>
+<item>William Lyons</item>
+<item>Student Centre</item>
+<item>Whitefriars</item>
+<item>William Morris</item>
+<item>Sports Centre</item>
+</string-array>
+
+
 </resources>
