@@ -10,52 +10,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.EditText;
 
 public class signup extends AppCompatActivity {
+
+    private EditText userID;
+    private EditText usernameSignup;
+    private EditText passwordSignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+
+        userID = (EditText) findViewById(R.id.userID);
+        usernameSignup = (EditText) findViewById(R.id.usernameSignup);
+        passwordSignup = (EditText) findViewById(R.id.passwordSignup);
     }
 
-    public class User {
-        private int userID;
-        private String username;
-        private String password;
-
-        public User (int userID, String username, String password){
-            this.userID = userID;
-            this.username = username;
-            this.password = password;
-        }
-
-        public int getUserID() {
-            return userID;
-        }
-
-        public void setUserID(int userID) {
-            this.userID = userID;
-        }
-
-        public String getUsername() {
-            return username;
-        }
-
-        public void setUsername(String username) {
-            this.username = username;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public void setPassword(String password) {
-            this.password = password;
-        }
+    public void save(View view){
+        int anuserID = Integer.parseInt(userID.getText().toString());
+        String aUsername = usernameSignup.getText().toString();
+        String aPassword = passwordSignup.getText().toString();
+        UserDatabase db = new UserDatabase(this);
+        db.addUser(new Users(anuserID, aUsername, aPassword));
     }
-
-
 
 
 }

@@ -28,14 +28,14 @@ public class UserDatabase extends SQLiteOpenHelper {
         super(context,"UserDB", null, 1);
     }
 
-    public void addUser(User, user) {
+    public void addUser(Users users) {
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
 
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put("userID", user.getuserID());
-        contentValues.put("username", user.getusername());
-        contentValues.put("password", user.getpassword());
+        contentValues.put("userID", users.getUserID());
+        contentValues.put("username", users.getUsername());
+        contentValues.put("password", users.getPassword());
 
         long result = sqLiteDatabase.insert("UserTable", null, contentValues);
 
@@ -44,9 +44,6 @@ public class UserDatabase extends SQLiteOpenHelper {
         } else{
             Log.d("dbhelper", "User Creation Failed");
         }
-
-
-
-
+        sqLiteDatabase.close();
     }
 }
