@@ -1,16 +1,23 @@
 package com.example.a300cemassignment;
 
+import android.content.DialogInterface;
 import android.graphics.Camera;
+import android.hardware.biometrics.BiometricPrompt;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.os.CancellationSignal;
 import android.provider.MediaStore;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
     private Button buttonSignup;
@@ -38,7 +45,42 @@ public class MainActivity extends AppCompatActivity {
                 openMainPage();
             }
         });
+        //Biometric Fingerprint Scanning, my phone does Iris and Face Unlock too
+        final Executor executor = Executors.newSingleThreadExecutor();
+        final BiometricPrompt biometricPrompt = new BiometricPrompt.Builder(this)
+                .setTitle("Authentication via Fingerprint")
+                .setSubtitle("Subtitle")
+                .setDescription("Description")
+                .setNegativeButton("Cancel", executor, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int i) {
 
+                    }
+                }).build();
+
+        Button authenticate = findViewById(R.id.AuthFingerprint);
+        final MainActivity activity = this;
+
+        authenticate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                biometricPrompt.authenticate(new CancellationSignal(), executor, new BiometricPrompt.AuthenticationCallback() {
+                    @Override
+                    public void onAuthenticationSucceeded(BiometricPrompt.AuthenticationResult result) {
+
+                        activity.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                Toast.makeText(MainActivity.this, "authentication success", Toast.LENGTH_LONG).show();
+                            }
+                        });
+                    }
+
+                });
+            }
+        });
 
     }
 

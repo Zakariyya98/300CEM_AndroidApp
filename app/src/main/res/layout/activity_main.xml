@@ -88,14 +88,14 @@
         android:text="@string/register" />
 
     <Button
-        android:id="@+id/cameraButton"
+        android:id="@+id/AuthFingerprint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="214dp"
         android:layout_marginBottom="12dp"
-        android:text="@string/take_a_picture" />
+        android:text="Fingerprint Auth" />
         //android:onClick="onButtonClick"
 
 </RelativeLayout>
