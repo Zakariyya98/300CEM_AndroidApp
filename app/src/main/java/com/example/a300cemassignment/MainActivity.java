@@ -1,16 +1,14 @@
 package com.example.a300cemassignment;
-
+//Import Statements for all imported interfaces in this class
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Camera;
 import android.hardware.biometrics.BiometricPrompt;
 import android.os.Build;
 import android.os.Bundle;
-
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import android.os.CancellationSignal;
 import android.provider.MediaStore;
 import android.view.Menu;
@@ -20,16 +18,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
+    //These are the private variables used to initiate taking a picture with the camera.
     private ImageView UserImage;
-
     private static final int REQUEST_IMAGE_CAPTURE = 101;
 
+    //Private variables for the buttons on this Class.
     private Button buttonSignup;
     private Button buttonHome;
 
@@ -38,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Setting the Variable to the Button ID.
         UserImage = findViewById(R.id.ViewPicture);
 
         //Button to open the Signup Page
@@ -101,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+    //The Intent which is used to initiate the activity to take a picture.
     public void takePicture(View view)
     {
         Intent imageTakeintent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -112,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //This code allows the Image to be shown on screen as a Bitmap as Data.
     @Override
     protected void onActivityResult(int requestcode, int resultcode, Intent data){
         {
@@ -124,12 +124,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+    //Used to open the Signup Class.
     public void opensignup() {
         Intent intent = new Intent(this, signup.class);
         startActivity(intent);
     }
-
+    //Used to open the MainPage Class.
     public void openMainPage() {
         Intent intent = new Intent(this, MainPage.class);
         startActivity(intent);
