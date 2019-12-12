@@ -1,6 +1,7 @@
 package com.example.a300cemassignment;
 
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.graphics.Camera;
 import android.hardware.biometrics.BiometricPrompt;
 import android.os.Build;
@@ -17,12 +18,18 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ImageView UserImage;
+
+    private static final int REQUEST_IMAGE_CAPTURE = 101;
+
     private Button buttonSignup;
     private Button buttonHome;
 
@@ -30,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        UserImage = findViewById(R.id.ViewPicture);
 
         //Button to open the Signup Page
         buttonSignup = (Button) findViewById(R.id.registerButton);
@@ -90,6 +99,29 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+    }
+
+    public void takePicture(View view)
+    {
+        Intent imageTakeintent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if(imageTakeintent.resolveActivity(getPackageManager())!=null);
+        {
+            startActivityForResult(imageTakeintent,REQUEST_IMAGE_CAPTURE);
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestcode, int resultcode, Intent data){
+        {
+            if(requestcode==REQUEST_IMAGE_CAPTURE && resultcode ==RESULT_OK);
+        }
+        Bundle extras = data.getExtras();
+        Bitmap imagebitmap = (Bitmap) extras.get("data");
+        UserImage.setImageBitmap(imagebitmap);
+
+
 
     }
 

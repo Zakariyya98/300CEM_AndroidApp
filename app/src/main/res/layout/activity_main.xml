@@ -96,6 +96,26 @@
         android:layout_marginStart="214dp"
         android:layout_marginBottom="12dp"
         android:text="Fingerprint Auth" />
-        //android:onClick="onButtonClick"
+
+    <Button
+        android:id="@+id/CameraButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="93dp"
+        android:text="Take a Picture"
+        android:onClick="takePicture"/>
+
+    <ImageView
+        android:id="@+id/ViewPicture"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="306dp"
+        android:src="@mipmap/ic_launcher" />
 
 </RelativeLayout>
