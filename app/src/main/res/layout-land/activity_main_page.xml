@@ -17,9 +17,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
         android:text="Welcome to Coventry University's Companion App"
         android:textSize="30sp" />
 
@@ -30,17 +30,19 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="366dp"
+        android:layout_marginStart="273dp"
+        android:layout_marginTop="204dp"
         android:text="View Weather" />
 
     <Button
         android:id="@+id/navBuilding"
         android:layout_width="152dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="311dp"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="121dp"
         android:text="View Buildings" />
 
     <Button
@@ -50,7 +52,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="133dp"
-        android:layout_marginTop="415dp"
+        android:layout_marginStart="273dp"
+        android:layout_marginTop="291dp"
         android:text="Exit App" />
 </RelativeLayout>
