@@ -36,7 +36,7 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
-        //
+        //Button to load the Activity with Location Co-ordinates
         LocatView = (Button) findViewById(R.id.navLoc);
         LocatView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +60,7 @@ public class MainPage extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //
+    //Intent to start the Activity
     public void openFindLocation() {
         Intent intent = new Intent(this, FindLocation.class);
         startActivity(intent);

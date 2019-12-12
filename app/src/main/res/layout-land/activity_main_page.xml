@@ -54,5 +54,5 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="273dp"
         android:layout_marginTop="291dp"
-        android:text="Exit App" />
+        android:text="View Location" />
 </RelativeLayout>

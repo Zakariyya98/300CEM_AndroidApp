@@ -1,7 +1,7 @@
 package com.example.a300cemassignment;
 
+//Import Statements for all imported interfaces in this class
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -11,8 +11,8 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
+//This Class will use GPS and LocationServices to determine your location
+//it will show your location in Latitude and Longitude
 public class FindLocation extends AppCompatActivity implements LocationListener {
     private TextView LocText;
     private LocationManager locationManager;
@@ -40,7 +40,7 @@ public class FindLocation extends AppCompatActivity implements LocationListener 
         onLocationChanged(location);
 
     }
-
+    //This is where the string will show the Co-ordinates of your location.
     @Override
     public void onLocationChanged(Location location) {
         double longitude = location.getLongitude();
