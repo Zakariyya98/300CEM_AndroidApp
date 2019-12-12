@@ -3,7 +3,10 @@ package com.example.a300cemassignment;
 import android.content.DialogInterface;
 import android.graphics.Camera;
 import android.hardware.biometrics.BiometricPrompt;
+import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 openMainPage();
             }
         });
+
         //Biometric Fingerprint Scanning, my phone does Iris and Face Unlock too
         final Executor executor = Executors.newSingleThreadExecutor();
         final BiometricPrompt biometricPrompt = new BiometricPrompt.Builder(this)
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         final MainActivity activity = this;
 
         authenticate.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.P)
             @Override
             public void onClick(View v) {
 
@@ -69,17 +74,21 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onAuthenticationSucceeded(BiometricPrompt.AuthenticationResult result) {
 
+
                         activity.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
 
                                 Toast.makeText(MainActivity.this, "User Authorised", Toast.LENGTH_LONG).show();
+
                             }
                         });
                     }
 
                 });
             }
+
+
         });
 
     }
