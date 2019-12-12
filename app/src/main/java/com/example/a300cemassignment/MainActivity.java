@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         final Executor executor = Executors.newSingleThreadExecutor();
         final BiometricPrompt biometricPrompt = new BiometricPrompt.Builder(this)
                 .setTitle("Authentication via Fingerprint")
-                .setSubtitle("Subtitle")
-                .setDescription("Description")
+                .setSubtitle("Please Place finger on Scanner")
+                .setDescription("Samsung Devices from S8 Onwards have alternative Authentication Options Iris and Face Scanning")
                 .setNegativeButton("Cancel", executor, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int i) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void run() {
 
-                                Toast.makeText(MainActivity.this, "authentication success", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "User Authorised", Toast.LENGTH_LONG).show();
                             }
                         });
                     }
