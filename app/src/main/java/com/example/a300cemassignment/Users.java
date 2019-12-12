@@ -1,5 +1,9 @@
 package com.example.a300cemassignment;
 
+//This Class allows the Getters and Setters for the Variables to
+//be set and in turn allows the UserDatabase and Signup page to
+//work together to store data.
+
 public class Users {
 
     private int userID;
