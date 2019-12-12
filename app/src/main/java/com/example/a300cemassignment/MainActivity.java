@@ -1,6 +1,7 @@
 package com.example.a300cemassignment;
 
 //Import Statements for all imported interfaces in this class
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.Camera;
@@ -89,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
                             public void run() {
 
                                 Toast.makeText(MainActivity.this, "User Authorised", Toast.LENGTH_LONG).show();
-
                             }
                         });
                     }
@@ -110,9 +110,10 @@ public class MainActivity extends AppCompatActivity {
 
     //This code allows the Image to be shown on screen as a Bitmap as Data.
     @Override
-    protected void onActivityResult(int requestcode, int resultcode, Intent data){
+    protected void onActivityResult(int requestcode, int resultcode, Intent data) {
+        super.onActivityResult(requestcode, resultcode, data);
         {
-            if(requestcode==REQUEST_IMAGE_CAPTURE && resultcode ==RESULT_OK);
+            if (requestcode == REQUEST_IMAGE_CAPTURE && resultcode == RESULT_OK) ;
         }
         Bundle extras = data.getExtras();
         Bitmap imagebitmap = (Bitmap) extras.get("data");
