@@ -92,13 +92,9 @@ public class MainActivity extends AppCompatActivity {
                             }
                         });
                     }
-
                 });
             }
-
-
         });
-
     }
     //The Intent which is used to initiate the activity to take a picture.
     public void takePicture(View view)
@@ -120,15 +116,14 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = data.getExtras();
         Bitmap imagebitmap = (Bitmap) extras.get("data");
         UserImage.setImageBitmap(imagebitmap);
-
-
-
     }
+
     //Used to open the Signup Class.
     public void opensignup() {
         Intent intent = new Intent(this, signup.class);
         startActivity(intent);
     }
+
     //Used to open the MainPage Class.
     public void openMainPage() {
         Intent intent = new Intent(this, MainPage.class);
