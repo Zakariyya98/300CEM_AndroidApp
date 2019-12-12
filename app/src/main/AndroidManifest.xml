@@ -8,6 +8,9 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
 
     <application
         android:allowBackup="true"
@@ -16,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GoogleAuth"></activity>
+        <activity android:name=".FindLocation"></activity>
+        <activity android:name=".GoogleAuth" />
         <activity android:name=".DisplayWeather" />
         <activity android:name=".MainPage" />
         <activity android:name=".NavigationPage" />

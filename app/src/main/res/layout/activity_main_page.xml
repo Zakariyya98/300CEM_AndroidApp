@@ -44,7 +44,7 @@
         android:text="View Buildings" />
 
     <Button
-        android:id="@+id/navExit"
+        android:id="@+id/navLoc"
         android:layout_width="147dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -52,5 +52,5 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="133dp"
         android:layout_marginTop="415dp"
-        android:text="Exit App" />
+        android:text="View Location" />
 </RelativeLayout>

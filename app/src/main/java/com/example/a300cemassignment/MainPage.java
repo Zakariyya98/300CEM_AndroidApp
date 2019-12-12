@@ -11,6 +11,7 @@ public class MainPage extends AppCompatActivity {
     //Private Variables for the Buttons
     private Button BuildingView;
     private Button WeatherView;
+    private Button LocatView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +36,33 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
+        //
+        LocatView = (Button) findViewById(R.id.navLoc);
+        LocatView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFindLocation();
+            }
+        });
+
     }
+
     //Intent to start the Activity
     public void openHomePage() {
         Intent intent = new Intent(this, HomePage.class);
         startActivity(intent);
 
     }
+
     //Intent to start the Activity
-    public void openDisplayWeather(){
+    public void openDisplayWeather() {
         Intent intent = new Intent(this, DisplayWeather.class);
+        startActivity(intent);
+    }
+
+    //
+    public void openFindLocation() {
+        Intent intent = new Intent(this, FindLocation.class);
         startActivity(intent);
     }
 }
